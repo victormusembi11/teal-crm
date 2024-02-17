@@ -1,3 +1,12 @@
-from django.test import TestCase
+"""URLs module."""
 
-# Create your tests here.
+from django.urls import path
+
+from core.views import about, home
+
+app_name = "core"
+
+urlpatterns = [
+    path("", home, name="home"),
+    path("about/", about, name="about"),
+]
